@@ -275,7 +275,38 @@
 // fetchProducts()
 
 
-console.log('Synchronous 1')
-setTimeout(_ => console.log('timeout 2'), 0)
-Promise.resolve().then(_ => console.log('Promise'))
-console.log('Synchronous 4')
+// console.log('Synchronous 1')
+// setTimeout(_ => console.log('timeout 2'), 0)
+// Promise.resolve().then(_ => console.log('Promise'))
+// console.log('Synchronous 4')
+
+// import fetch from 'node-fetch';
+
+// const promise = fetch ('https://jsonplaceholder.typicode.com/todos/1')
+
+// promise 
+//     .then(res => res.json())
+//     .then(user => console.log('hi', user.title))
+
+// console.log('synchronous')
+
+const getFruit = async(name) => {
+    const fruits = {
+        pineapple: '🍍',
+        peach: '🍑',
+        strawberry: '🍓'
+    }
+
+    return fruits[name]
+}
+
+getFruit('peach').then(console.log)
+
+const makeSmoothie  = async() => {
+    const a = await getFruit('pineapple')
+    const b = await getFruit('strawberry')
+
+    return [a,b]
+}
+
+makeSmoothie().then(console.log)
