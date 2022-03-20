@@ -142,30 +142,30 @@
 // console.log(aurora.describe());
 // console.log(glacius.describe());
 
-class Account {
-    constructor (name) {
-        this.name = name;
-        this.balance = 0;
-    }
+// class Account {
+//     constructor (name) {
+//         this.name = name;
+//         this.balance = 0;
+//     }
 
-    credit (amount) {
-        this.balance += amount
-    }
+//     credit (amount) {
+//         this.balance += amount
+//     }
 
-    describe () {
-        return `owner: ${this.name}, balance: ${this.balance}`
-    }
-}
+//     describe () {
+//         return `owner: ${this.name}, balance: ${this.balance}`
+//     }
+// }
 
-const accountList = []
+// const accountList = []
 
-accountList.push(new Account ('Sean'))
-accountList.push(new Account ('Brad'))
-accountList.push(new Account ('Georges'))
+// accountList.push(new Account ('Sean'))
+// accountList.push(new Account ('Brad'))
+// accountList.push(new Account ('Georges'))
 
-accountList.forEach(account => {
-    account.credit(1000)
-    console.log(account.describe())
-})
+// accountList.forEach(account => {
+//     account.credit(1000)
+//     console.log(account.describe())
+// })
 
 
